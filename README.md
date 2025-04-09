@@ -1,94 +1,99 @@
-
 # 🐍 Python Knowledge Constrictor - Quiz Game
 
-Welcome to **Python Knowledge Constrictor**, a fun and interactive Python quiz game built with **Tkinter**!
-
-This quiz is designed to test your Python programming knowledge through multiple-choice questions with a timer. At the end of the quiz, you'll get a score and your knowledge level — Beginner, Intermediate, or Advanced!
-
----
-
-## 🎮 Features
-
-- ✅ 12 well-crafted Python MCQs
-- ⏳ Countdown timer (20 seconds per question)
-- 📊 Progress bar to track your quiz journey
-- 🎯 Final score with level classification
-- 💻 Easy-to-use graphical user interface (GUI)
-- 🛠️ Windows installer available (built using Inno Setup)
+Welcome to **Python Knowledge Constrictor**, a fun and interactive Python quiz game built using **Tkinter**.  
+This game is designed to test your Python programming knowledge through a series of multiple-choice questions — all under time pressure! 🧠🔥
 
 ---
 
-## 🖥️ Technologies Used
+## 🎯 Features
 
-- **Python 3**
-- **Tkinter** (for GUI)
-- **ttk Progressbar**
-- **PIL (Pillow)** (optional, if image features are added)
-- **Inno Setup** (for creating Windows executable installer)
+- ✅ **12 Multiple Choice Questions** to test your Python skills  
+- ⏳ **20-second countdown timer** for each question  
+- 📊 **Progress bar** to show your question progress  
+- 🧠 **Score evaluation**: Beginner, Intermediate, or Advanced  
+- 🎨 **Attractive GUI** using Tkinter and emojis  
+- 💻 **Standalone `.exe` version available** (no need for Python installed)  
 
 ---
 
-## 🚀 How to Run
+## 🛠️ How to Run the Game (Source Code)
 
-### 🔹 If Running from Source Code:
-
-1. Make sure Python 3 is installed.
-2. Install dependencies (if not already):
+1. Make sure Python is installed (3.8 or above).
+2. Install required module:
    ```bash
    pip install pillow
-Run the script:
+   ```
+3. Run the script:
+   ```bash
+   python quiz_game.py
+   ```
+
+---
+
+## 🧪 How I Created the `.exe` File using PyInstaller
+
+I converted the Python script into a Windows executable using **PyInstaller** so users don’t need Python installed.
+
+### Steps I Followed:
+
+1. Installed PyInstaller:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Converted script into `.exe`:
+   ```bash
+   pyinstaller --onefile --noconsole quiz_game.py
+   ```
+
+3. Found the `.exe` in the `dist` folder:
+   ```
+   dist/quiz_game.exe
+   ```
+
+### Explanation:
+- `--onefile`: Combines everything into a single executable  
+- `--noconsole`: Prevents console window from appearing (good for GUI apps)
+
+---
+
+## 📦 How I Created a Windows Installer using Inno Setup
+
+To distribute the game like professional software, I created a setup file using **Inno Setup**.
+
+### Steps I Followed:
+
+1. Installed [Inno Setup](https://jrsoftware.org/isinfo.php)
+2. Wrote this `.iss` script:
+   ```iss
+   [Setup]
+   AppName=Python Knowledge Constrictor
+   AppVersion=1.0
+   DefaultDirName={pf}\PythonQuizGame
+   DefaultGroupName=Python Knowledge Constrictor
+   OutputBaseFilename=PythonQuizInstaller
+   Compression=lzma
+   SolidCompression=yes
+
+   [Files]
+   Source: "dist\quiz_game.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+   [Icons]
+   Name: "{group}\Python Knowledge Constrictor"; Filename: "{app}\quiz_game.exe"
+   ```
+
+3. Compiled it with Inno Setup and got a `.exe` installer ready to share!
+
+---
 
 
-python quiz_game.py
-🔹 If Using Windows Installer:
-Download the .exe setup file from the Releases section (link to be updated).
+## 👤 Author Priyanshu Gupta 
 
-Install the application using the setup wizard.
+Made with ❤️ using Python and Tkinter.  
+If you enjoy this project, don’t forget to ⭐ the repo!
 
-Launch the game from the Start Menu or Desktop shortcut.
+---
 
-🧠 Quiz Scoring System
-Score Range	Level
-0 - 15	Beginner
-16 - 28	Intermediate
-29 - 48	Advanced
-Each correct answer carries different scores based on difficulty (e.g., 4, 5, or 6 points).
+## 📃 License
 
-
-📦 Installer Creation (For Developers)
-Installer created using Inno Setup. To build it:
-
-Install Inno Setup.
-
-Use a script like this to create the installer:
-
-
-[Setup]
-AppName=Python Quiz Game
-AppVersion=1.0
-DefaultDirName={pf}\PythonQuizGame
-DefaultGroupName=Python Quiz Game
-OutputDir=.\dist
-OutputBaseFilename=PythonQuizInstaller
-
-[Files]
-Source: "dist\quiz_game.exe"; DestDir: "{app}"; Flags: ignoreversion
-
-[Icons]
-Name: "{group}\Python Quiz Game"; Filename: "{app}\quiz_game.exe"
-Name: "{commondesktop}\Python Quiz Game"; Filename: "{app}\quiz_game.exe"
-📃 License
-This project is open-source and available under the MIT License.
-
-🤝 Contributing
-Pull requests are welcome! Feel free to suggest improvements or add new features.
-
-📫 Contact
-For queries or collaboration, feel free to reach out:
-
-📧 LinkedIn Id: https://www.linkedin.com/in/priyanshu-gupta-a37464309/
-🐙 GitHub: PRIYANSHU GUPTA
-
-✨ Enjoy the quiz and level up your Python skills!
-
-
+This project is licensed under the **MIT License**.
