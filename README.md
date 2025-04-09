@@ -86,8 +86,8 @@ Pull requests are welcome! Feel free to suggest improvements or add new features
 📫 Contact
 For queries or collaboration, feel free to reach out:
 
-📧 Email: your-email@example.com
-🐙 GitHub: yourusername
+📧 LinkedIn Id: https://www.linkedin.com/in/priyanshu-gupta-a37464309/
+🐙 GitHub: PRIYANSHU GUPTA
 
 ✨ Enjoy the quiz and level up your Python skills!
 
