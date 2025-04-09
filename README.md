@@ -97,3 +97,17 @@ If you enjoy this project, don’t forget to ⭐ the repo!
 ## 📃 License
 
 This project is licensed under the **MIT License**.
+
+
+## Installation
+
+### 1. Download the Setup
+
+[![Download Setup](https://img.shields.io/badge/DOWNLOAD-SETUP-brightgreen?style=for-the-badge)](https://github.com/Priyanshu-Gupta-git/Python_Quiz/releases/tag/Python_Quiz_Game_setup)
+
+### 2. Extract and Run
+
+- Extract the downloaded file.
+- Run `setup.exe` (Windows) or `python main.py` (for manual execution).
+
+
